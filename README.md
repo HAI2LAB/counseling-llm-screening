@@ -53,6 +53,11 @@ Tested with Python 3.11, PyTorch 2.3.0, CUDA 12.1.
 | 4 | `05_train_qlora_ddp.py` | QLoRA fine-tuning + evaluation (DDP; zero-shot mode; oversampling; chunking; participant aggregation; cluster bootstrap) |
 | 5 | `04_symptom_tagger.py` | Utterance-level 41-code symptom tagger |
 | 6 | `07_merge_cv.py`, `08_merge_symptom_cv.py` | Merge fold results; pooled metrics + 95% CIs; McNemar tests |
+| 7 | `09_make_random_session_folds.py` | Audit 1: naive random session-level folds |
+| 8 | `10_build_masked_folds.py` | Audit 2: diagnostic/substance cue masking (dictionary + boundary rules) |
+| 9 | `11_k_session_curve.py` | Audit 3: first-k-session aggregation curve (no retraining) |
+| 10 | `12_tfidf_baseline.py` | Lexical TF-IDF + logistic regression baseline |
+| - | `run_4set.sh` | Orchestrates all four audits (dryrun for CPU checks, gpu for training) |
 
 Example (one fold, primary model):
 
